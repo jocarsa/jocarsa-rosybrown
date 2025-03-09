@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura Teresa Tortajada</title>
+    <style>
+        @import url('https://static.jocarsa.com/fuentes/ubuntu-font-family-0.83/ubuntu.css');
+
+        body {
+            font-family: Ubuntu, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            background: black;
+            color: white;
+            padding: 20px;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+            font-weight: bold;
+        }
+        .header h2 {
+            font-size: 18px;
+            margin: 0;
+            font-weight: bold;
+            color: white;
+        }
+        .invoice-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .sender-details, .recipient-details {
+            width: 48%;
+        }
+        .sender-details h3, .recipient-details h3 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+        .invoice-number {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .invoice-table th {
+            background-color: #f5f5f5;
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .invoice-table td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .invoice-table .price-column {
+            text-align: right;
+        }
+        .total-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-bottom: 30px;
+        }
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            width: 250px;
+            margin-bottom: 5px;
+        }
+        .total-row.final {
+            font-weight: bold;
+            border-top: 1px solid #ddd;
+            padding-top: 5px;
+        }
+        .footer {
+            font-size: 10px;
+            color: #666;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+        .bank-details {
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>TERESA TORTAJADA</h1>
+            <h2>MARKETING - DISEÑO - COMUNICACIÓN</h2>
+        </div>
+        
+        <div class="invoice-number">
+            <div>
+                <strong>FACTURA NÚMERO:</strong> 5/24
+            </div>
+            <div>
+                <strong>FECHA:</strong> 3/1/2024
+            </div>
+        </div>
+
+        <div class="invoice-details">
+            <div class="sender-details">
+                <h3>Emisor</h3>
+                <p>Teresa Tortajada Calaforra<br>
+                Av/Primero de mayo 40, 3<br>
+                46017 Valencia<br>
+                24443845C</p>
+            </div>
+            <div class="recipient-details">
+                <h3>Cliente</h3>
+                <p>Plantación Spain SL<br>
+                C/Almirante Cadarso, 11 bajo<br>
+                46005 Valencia<br>
+                B97017164</p>
+            </div>
+        </div>
+
+        <table class="invoice-table">
+            <thead>
+                <tr>
+                    <th>UNIDADES</th>
+                    <th>DESCRIPCIÓN</th>
+                    <th class="price-column">PRECIO</th>
+                    <th class="price-column">TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        Creación, gestión y mantenimiento de contenidos en RRSS (3+1 redes)
+                        <ul><li>Diseño gráfico</li> <li>Gestión de comunidades Google My Business</li> <li>Campañas de RRSS</li></ul>
+                    </td>
+                    <td class="price-column">900,00€</td>
+                    <td class="price-column">900,00€</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="total-section">
+            <div class="total-row">
+                <div>TOTAL LÍNEAS:</div>
+                <div>900,00€</div>
+            </div>
+            <div class="total-row">
+                <div>Total IVA:</div>
+                <div>189,00€</div>
+            </div>
+            <div class="total-row">
+                <div>IRPF (15%):</div>
+                <div>135,00€</div>
+            </div>
+            <div class="total-row final">
+                <div>TOTAL:</div>
+                <div>954,00€</div>
+            </div>
+        </div>
+
+        <div class="bank-details">
+            <strong>CUENTA:</strong> ES24 0049 1283 1525 1009 3107
+        </div>
+
+        <div class="footer">
+            Le recordamos que su dirección de correo electrónico junto con la información de carácter personal que nos haya facilitado, ha sido incorporada según lo establecido en el Reglamento (UE) 2016/679
+            del Parlamento Europeo y del Consejo, de 27 de abril de 2016, de Protección de Datos de la Unión a un fichero titularidad de TERESA TORTAJADA CALAFORRA, cuya finalidad es la debida gestión
+            administrativa y contable de la actividad. De acuerdo con lo establecido en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, de Protección de Datos, usted
+            tiene derecho de acceso, rectificación y cancelación sobre los mismos en los términos legales, dirigiéndose por escrito a: TERESA TORTAJADA CALAFORRA, Avd. Primero de Mayo nº 40, puerta 3, 46017
+            Valencia, teresatortajadacalaforra@gmail.com
+        </div>
+    </div>
+</body>
+</html>
+

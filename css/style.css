@@ -1,0 +1,297 @@
+/* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Panel de Administración */
+.admin-header {
+    background: #333;
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-container {
+    flex: 1;
+    display: flex;
+    width: 100%;
+}
+
+.admin-nav {
+    width: 220px;
+    background: #444;
+    padding: 20px;
+}
+
+.admin-nav ul {
+    list-style: none;
+}
+
+.admin-nav ul li {
+    margin-bottom: 15px;
+}
+
+.admin-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.admin-content {
+    flex: 1;
+    padding: 30px;
+    background: #fff;
+    overflow-y: auto;
+}
+
+/* Formularios a ancho completo */
+form {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-full {
+    width: 100%;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="date"],
+form input[type="number"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+form button, .btn-submit {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+form button:hover, .btn-submit:hover {
+    background: #218838;
+}
+
+/* Login */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container .error {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Factura: creación/edición/imprimir */
+.invoice-preview {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+    width: 100%;
+}
+
+.invoice-preview .header {
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.invoice-preview .header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.invoice-preview .header h2 {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.invoice-number {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.invoice-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.invoice-details .sender-details,
+.invoice-details .recipient-details {
+    width: 48%;
+}
+
+.invoice-details h3 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.invoice-table th,
+.invoice-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.invoice-table th {
+    background: #f8f8f8;
+}
+
+.price-column {
+    text-align: right;
+}
+
+.total-section {
+    text-align: right;
+    padding: 10px 0;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.total-row.final {
+    font-weight: bold;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.bank-details {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.footer {
+    font-size: 10px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Tablas en listados CRUD */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+@media print {
+  /* Ocultar elementos de navegación, cabecera y cualquier otro elemento de la UI */
+  header,
+  nav,
+  .admin-header,
+  .admin-nav,
+  .admin-content,
+  .login-container,
+  .btn-submit {
+    display: none !important;
+  }
+
+  /* Solo mostrar el contenedor de la factura */
+  .container,
+  .invoice-preview {
+    display: block !important;
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Configuración de página para A4 */
+  @page {
+    size: A4;
+    margin: 20mm;
+  }
+}
+/* Estilo para formularios en dos columnas */
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-label {
+  flex: 0 0 40%;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+.form-field {
+  flex: 1;
+}
+/* New styles for charts grid layout */
+#charts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
