@@ -134,6 +134,9 @@ switch ($page) {
     <script src="https://ghostwhite.jocarsa.com/analytics.js?user=rosybrown.jocarsa.com"></script>
 <link rel="stylesheet" href="https://jocarsa.github.io/jocarsa-pink/jocarsa%20%7C%20pink.css">
 <script src="https://jocarsa.github.io/jocarsa-pink/jocarsa%20%7C%20pink.js"></script>
+ <link rel="stylesheet" href="https://jocarsa.github.io/jocarsa-seashell/jocarsa%20%7C%20seashell.css">
+<script src="https://jocarsa.github.io/jocarsa-seashell/jocarsa%20%7C%20seashell.js"></script>
+<script src="https://jocarsa.github.io/jocarsa-silver/jocarsa-silver.js"></script>
 </body>
 </html>
 
