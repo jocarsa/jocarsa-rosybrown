@@ -1,6 +1,9 @@
 <?php
 ?>
 <h2 title="Listado de facturas">Facturas</h2>
+<p>Esta área le permite crear, visualizar, editar, imprimir y eliminar facturas. Desde aquí se puede revisar el historial de facturación, consultar detalles de cada operación y realizar modificaciones en caso de ser necesario. Es la sección central para la gestión de su actividad comercial y administrativa.
+
+</p>
 <a href="index.php?page=factura_crear" class="btn-submit" title="Crear nueva factura" style="margin-bottom:20px; display:inline-block;">Crear Factura</a>
 <table title="Tabla de facturas">
     <tr>

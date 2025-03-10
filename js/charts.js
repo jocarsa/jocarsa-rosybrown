@@ -235,7 +235,7 @@ const MyCharts = {
 
   // Create an interactive pie chart
   createPieChart: function (data, config = {}) {
-  const width = config.width || 400;
+  const width = 600;
   const height = config.height || 400;
   const colors = config.colors || ["#4daf4a", "#377eb8", "#ff7f00", "#984ea3", "#e41a1c"];
   const radius = Math.min(width, height) / 2;

@@ -63,6 +63,7 @@ function inicializarDB($db) {
         iva_percentage INTEGER
     )");
     // (Optional: insert default epígrafes)
+    /*
     $stmt = $db->query("SELECT COUNT(*) FROM epigrafes");
     if ($stmt->fetchColumn() == 0) {
         $db->exec("INSERT INTO epigrafes (name, iva_percentage) VALUES 
@@ -71,7 +72,7 @@ function inicializarDB($db) {
             ('Superreducido', 4),
             ('Exento', 0)
         ");
-    }
+    }*/
 
     // Tabla de facturas (add epigrafe_id)
     $db->exec("CREATE TABLE IF NOT EXISTS facturas (
@@ -99,5 +100,37 @@ function inicializarDB($db) {
         FOREIGN KEY(producto_id) REFERENCES productos(id)
     )");
 }
+// Tabla de proveedores
+$db->exec("CREATE TABLE IF NOT EXISTS proveedores (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    razon_social TEXT,
+    direccion TEXT,
+    codigo_postal TEXT,
+    poblacion TEXT,
+    identificacion_fiscal TEXT,
+    contacto_nombre TEXT,
+    contacto_email TEXT,
+    contacto_telefono TEXT
+)");
+
+// Tabla de gastos
+$db->exec("CREATE TABLE IF NOT EXISTS gastos (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    gasto_deducible REAL,
+    fecha_emision TEXT,
+    fecha_operaciones TEXT,
+    numero_factura TEXT,
+    fecha_factura TEXT,
+    proveedor_id INTEGER,
+    total_factura REAL,
+    base_imponible REAL,
+    tipo_retencion TEXT,
+    importe_retencion REAL,
+    tipo_iva TEXT,
+    cuota_iva REAL,
+    iva_deducido REAL,
+    FOREIGN KEY(proveedor_id) REFERENCES proveedores(id)
+)");
+
 ?>
 

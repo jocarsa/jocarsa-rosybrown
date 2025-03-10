@@ -26,10 +26,10 @@ if (!isset($_SESSION['usuario'])) {
         <div class="login-container">
             <!-- Cabecera con nombre de la aplicación y logo -->
             <div class="app-header" title="jocarsa | rosybrown">
-                <img src="rosybrown.png" alt="Logo jocarsa | rosybrown" title="Logo jocarsa | rosybrown" style="max-width:100px; display:block; margin:0 auto;">
-                <h1>jocarsa | rosybrown</h1>
+                <img src="rosybrown.png" alt="Logo jocarsa | rosybrown" title="Logo jocarsa | rosybrown" style="max-width:100%; display:block; margin:0 auto;">
+                <h1 style="text-align:center">jocarsa | rosybrown</h1>
             </div>
-            <h2 title="Ingrese sus credenciales">Iniciar Sesión</h2>
+            
             <?php if(isset($error_login)) echo "<p class='error' title='Mensaje de error'>$error_login</p>"; ?>
             <form method="post" action="index.php">
                 <div class="form-row">

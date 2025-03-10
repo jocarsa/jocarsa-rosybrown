@@ -53,6 +53,13 @@ function activo($pagina){
                 <li <?php activo("clientes") ?>><a href="index.php?page=clientes" title="Gestionar clientes">Clientes</a></li>
                 <li <?php activo("productos") ?>><a href="index.php?page=productos" title="Gestionar productos">Productos</a></li>
                 <li <?php activo("facturas") ?>><a href="index.php?page=facturas" title="Gestionar facturas">Facturas</a></li>
+                	<hr>
+                <li <?php activo("proveedores") ?>><a href="index.php?page=proveedores" title="Gestionar proveedores">Proveedores</a></li>
+					
+						<li <?php activo("gastos") ?>><a href="index.php?page=gastos" title="Gestionar gastos">Gastos</a></li>
+						<hr>
+						<li <?php activo("informes") ?>><a href="index.php?page=informes" title="Ver informes">Informes</a></li>
+
                 
                 <hr>
                 <li <?php activo("usuarios") ?>><a href="index.php?page=usuarios" title="Gestionar usuarios">Usuarios</a></li>
@@ -124,6 +131,36 @@ switch ($page) {
     case 'epigrafes_editar':
         include "paginas/epigrafes_editar.php";
         exit;
+       case 'proveedores':
+        include "paginas/proveedores.php";
+        break;
+    case 'crearproveedor':
+        include "paginas/crearproveedor.php";
+        exit;
+    case 'editarproveedor':
+        include "paginas/editarproveedor.php";
+        exit;
+    case 'gastos':
+        include "paginas/gastos.php";
+        break;
+    case 'creargasto':
+        include "paginas/creargasto.php";
+        exit;
+    case 'editargasto':
+        include "paginas/editargasto.php";
+        exit;
+    case 'informes':
+        include "paginas/informes.php";
+        break;
+    case 'informes_libro_ingresos':
+        include "paginas/informes_libro_ingresos.php";
+        break;
+    case 'informes_libro_gastos':
+        include "paginas/informes_libro_gastos.php";
+        break;
+    case 'informes_libro_mayor':
+        include "paginas/informes_libro_mayor.php";
+        break;
     default:
         echo "<p title='Página no encontrada'>Página no encontrada.</p>";
 }
@@ -137,6 +174,7 @@ switch ($page) {
  <link rel="stylesheet" href="https://jocarsa.github.io/jocarsa-seashell/jocarsa%20%7C%20seashell.css">
 <script src="https://jocarsa.github.io/jocarsa-seashell/jocarsa%20%7C%20seashell.js"></script>
 <script src="https://jocarsa.github.io/jocarsa-silver/jocarsa-silver.js"></script>
+ <link rel="stylesheet" href="https://jocarsa.github.io/jocarsa-silver/jocarsa-silver.css">
 </body>
 </html>
 

@@ -1,6 +1,9 @@
 <?php
 // epigrafes.php
 echo "<h2 title='Listado de epígrafes'>Epígrafes</h2>";
+echo '<p>En la sección de Epígrafes debe introducir los códigos o nombres que identifican la actividad económica con la que factura, junto con el porcentaje de IVA correspondiente, para que cada factura refleje correctamente el tratamiento fiscal aplicable.
+
+</p>';
 echo "<a href='index.php?page=epigrafes_crear' class='btn-submit' title='Crear nuevo epígrafe' style='margin-bottom:20px; display:inline-block;'>Crear Epígrafe</a>";
 echo "<table title='Tabla de epígrafes'>
         <tr>

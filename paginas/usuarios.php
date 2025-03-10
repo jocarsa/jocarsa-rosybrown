@@ -1,4 +1,7 @@
 <h2 title="Listado de usuarios">Usuarios</h2>
+<p>La sección "Usuarios" le permite gestionar el acceso al sistema. Puede crear nuevos usuarios, así como editar o eliminar aquellos que ya no requiera. Asegúrese de que sólo el personal autorizado tenga acceso al panel de administración, para mantener la seguridad y la integridad de los datos.
+
+</p>
 <a href="index.php?page=usuario_crear" class="btn-submit" title="Crear nuevo usuario" style="margin-bottom:20px; display:inline-block;">Crear Usuario</a>
 <table title="Tabla de usuarios">
     <tr>

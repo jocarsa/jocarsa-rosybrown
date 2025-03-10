@@ -1,4 +1,7 @@
 <h2 title="Listado de productos">Productos</h2>
+<p>En "Productos" se gestionan los artículos o servicios que ofrece. Aquí puede definir o modificar el nombre, descripción y precio de cada producto o servicio. Estos datos se utilizarán al generar facturas, permitiendo una selección rápida y precisa de los ítems a facturar.
+
+</p>
 <a href="index.php?page=producto_crear" class="btn-submit" title="Crear nuevo producto" style="margin-bottom:20px; display:inline-block;">Crear Producto</a>
 <table title="Tabla de productos">
     <tr>

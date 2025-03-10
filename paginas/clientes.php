@@ -1,6 +1,9 @@
 <?php
 	?>
                     <h2 title="Listado de clientes">Clientes</h2>
+                    <p>Esta sección está dedicada a la administración de la información de sus clientes. Podrá crear nuevos registros, editar datos existentes o eliminar clientes cuando ya no sean necesarios. Contar con un listado actualizado de clientes facilita la emisión de facturas y el seguimiento de la relación comercial.
+
+</p>
                     <a href="index.php?page=cliente_crear" class="btn-submit" title="Crear nuevo cliente" style="margin-bottom:20px; display:inline-block;">Crear Cliente</a>
                     <table title="Tabla de clientes">
                         <tr>

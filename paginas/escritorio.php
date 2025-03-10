@@ -4,6 +4,9 @@
 // Display welcome message
 echo "<h2 title='Bienvenido a la página de inicio'>Inicio</h2>";
 echo "<p title='Mensaje de bienvenida'>Bienvenido, " . htmlspecialchars($_SESSION['usuario']['nombre']) . "!</p>";
+echo '<p>Esta es la página principal o "dashboard" del sistema. Aquí se le ofrece una visión global de su actividad a través de gráficos interactivos que muestran la facturación mensual, trimestral y por cliente. Es el lugar ideal para tener un resumen rápido de los datos clave y el rendimiento de su negocio.
+
+</p>';
 
 // Fetch data for monthly totals (for line chart)
 // Group by year-month (e.g. "2024-03")

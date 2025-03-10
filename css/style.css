@@ -265,7 +265,7 @@ th, td {
 }
 
 /* Estilo para formularios en dos columnas */
-.form-row {
+.admin-container .form-row {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -312,4 +312,7 @@ hr{
 }
 .activo a{
 	color:black !important;
+}
+p{
+	padding:20px;
 }
