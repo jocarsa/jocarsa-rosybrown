@@ -38,9 +38,7 @@ function activo($pagina){
 <body>
     <header class="admin-header" title="Panel de administración de jocarsa | rosybrown">
         <h1><img src="rosybrown.png">jocarsa | rosybrown</h1>
-        <div class="admin-logout">
-            <a href="index.php?accion=logout" title="Cerrar sesión">Cerrar Sesión</a>
-        </div>
+       
     </header>
     <div class="admin-container">
         <nav class="admin-nav">
@@ -64,7 +62,8 @@ function activo($pagina){
                 <hr>
                 <li <?php activo("usuarios") ?>><a href="index.php?page=usuarios" title="Gestionar usuarios">Usuarios</a></li>
                 
-
+					<hr>
+                <li>  <a href="index.php?accion=logout" title="Cerrar sesión">Cerrar Sesión</a></li>
             </ul>
         </nav>
         <main class="admin-content">
