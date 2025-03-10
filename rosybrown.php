@@ -1,6 +1,7 @@
 <?php
 $config = require 'config.php';
 session_start();
+include "../jocarsa-red/jocarsa | red.php";
 
 // Conexión a la base de datos usando la URL de config.php
 try {
