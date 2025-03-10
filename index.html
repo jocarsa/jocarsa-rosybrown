@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jocarsa | rosybrown - Software de Facturación y Administración</title>
+  <style>
+    /* Reset básico y tipografía */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Ubuntu', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+    }
+    /* Header */
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      max-width: 80px;
+      vertical-align: middle;
+    }
+    header h1 {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 2em;
+      margin-left: 10px;
+    }
+    /* Navegación */
+    nav {
+      background: #555;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      padding: 10px 20px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #777;
+    }
+    /* Sección Hero */
+    .hero {
+      background: url('rosybrown.png') no-repeat center center/cover;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-content h2 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    .hero-content p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+    .cta {
+      display: inline-block;
+      background: #28a745;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .cta:hover {
+      background: #218838;
+    }
+    /* Sección de características */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 50px 20px;
+      background: #fff;
+    }
+    .feature {
+      flex: 1 1 300px;
+      margin: 20px;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .feature h3 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .feature p {
+      color: #666;
+    }
+    /* Footer */
+    .footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    /* Responsividad */
+    @media (max-width: 768px) {
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="rosybrown.png" alt="Logo jocarsa | rosybrown">
+    <h1>jocarsa | rosybrown</h1>
+  </header>
+  
+  <nav>
+    <a href="#features">Características</a>
+    <a href="#contact">Contacto</a>
+    <a href="rosybrown.php">Acceder al Panel</a>
+  </nav>
+  
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Gestiona tu facturación y administración de forma sencilla</h2>
+      <p>Con jocarsa | rosybrown, disfruta de una solución integral para emitir facturas, gestionar clientes, productos y gastos, además de generar informes detallados.</p>
+      <a href="index.php" class="cta">Empieza ahora</a>
+    </div>
+  </section>
+  
+  <section id="features" class="features">
+    <div class="feature">
+      <h3>Gestión de Facturas</h3>
+      <p>Crea, edita, imprime y administra tus facturas de manera rápida y segura.</p>
+    </div>
+    <div class="feature">
+      <h3>Control de Clientes</h3>
+      <p>Mantén un registro actualizado de tus clientes para una facturación eficiente.</p>
+    </div>
+    <div class="feature">
+      <h3>Informes Interactivos</h3>
+      <p>Visualiza gráficos y reportes que te ayudarán a tomar decisiones informadas.</p>
+    </div>
+    <div class="feature">
+      <h3>Fácil de Usar</h3>
+      <p>Interfaz intuitiva y moderna para que puedas centrarte en lo que importa.</p>
+    </div>
+  </section>
+  
+  <footer class="footer" id="contact">
+    <p>&copy; 2025 jocarsa | rosybrown. Todos los derechos reservados.</p>
+    <p>Contacto: <a href="mailto:soporte@jocarsa.com">info@jocarsa.com</a></p>
+  </footer>
+</body>
+</html>
+

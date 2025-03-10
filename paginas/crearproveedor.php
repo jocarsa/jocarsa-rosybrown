@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['razon_social'])) {
         $_POST['contacto_email'],
         $_POST['contacto_telefono']
     ]);
-    echo "<script>window.location.href='index.php?page=proveedores';</script>";
+    echo "<script>window.location.href='rosybrown.php?page=proveedores';</script>";
     exit;
 }
 ?>
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['razon_social'])) {
 </head>
 <body>
     <h2 title="Crear nuevo proveedor">Crear Proveedor</h2>
-    <form method="post" action="index.php?page=crearproveedor" class="form-full">
+    <form method="post" action="rosybrown.php?page=crearproveedor" class="form-full">
         <div class="form-row">
             <div class="form-label"><label>Razón Social:</label></div>
             <div class="form-field"><input type="text" name="razon_social" required></div>

@@ -94,7 +94,7 @@ $epigrafes = $db->query("SELECT * FROM epigrafes")->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
     <h2>Editar Factura</h2>
-    <form method="post" action="index.php?page=factura_editar&id=<?php echo $factura_id; ?>" class="form-full">
+    <form method="post" action="rosybrown.php?page=factura_editar&id=<?php echo $factura_id; ?>" class="form-full">
         <div class="form-row">
             <div class="form-label">
                 <label>Nº Factura:</label>

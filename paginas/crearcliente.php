@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['cliente_nombre'])) {
                             $_POST['city'],
                             $_POST['id_number']
                         ]);
-                        echo "<script>window.location.href='index.php?page=clientes';</script>";
+                        echo "<script>window.location.href='rosybrown.php?page=clientes';</script>";
                         exit;
                     }
                     ?>
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['cliente_nombre'])) {
                     </head>
                     <body>
                         <h2 title="Crear nuevo cliente">Crear Cliente</h2>
-                        <form method="post" action="index.php?page=cliente_crear" class="form-full">
+                        <form method="post" action="rosybrown.php?page=cliente_crear" class="form-full">
                             <div class="form-row">
                                 <div class="form-label">
                                     <label title="Nombre completo del cliente">Nombre:</label>

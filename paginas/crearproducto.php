@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nombre'])) {
         $_POST['descripcion'],
         $_POST['price']
     ]);
-    echo "<script>window.location.href='index.php?page=productos';</script>";
+    echo "<script>window.location.href='rosybrown.php?page=productos';</script>";
     exit;
 }
 ?>
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nombre'])) {
 </head>
 <body>
     <h2 title="Crear nuevo producto">Crear Producto</h2>
-    <form method="post" action="index.php?page=producto_crear" class="form-full">
+    <form method="post" action="rosybrown.php?page=producto_crear" class="form-full">
         <div class="form-row">
             <div class="form-label">
                 <label title="Nombre del producto">Nombre del Producto:</label>

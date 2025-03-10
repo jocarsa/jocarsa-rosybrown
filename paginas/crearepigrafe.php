@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['name'])) {
         $_POST['name'],
         $_POST['iva_percentage']
     ]);
-    echo "<script>window.location.href='index.php?page=epigrafes';</script>";
+    echo "<script>window.location.href='rosybrown.php?page=epigrafes';</script>";
     exit;
 }
 ?>
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['name'])) {
 </head>
 <body>
     <h2 title="Crear nuevo epígrafe">Crear Epígrafe</h2>
-    <form method="post" action="index.php?page=epigrafes_crear" class="form-full">
+    <form method="post" action="rosybrown.php?page=epigrafes_crear" class="form-full">
         <div class="form-row">
             <div class="form-label">
                 <label title="Nombre del epígrafe">Nombre:</label>

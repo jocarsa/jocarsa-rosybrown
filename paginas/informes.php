@@ -57,17 +57,17 @@
     <div class="informe-card" title="Libro de Ingresos">
       <h3>Libro de Ingresos</h3>
       <p>Listado detallado de todos los ingresos facturados.</p>
-      <a href="index.php?page=informes_libro_ingresos" class="btn-submit" title="Ver Libro de Ingresos">Ver</a>
+      <a href="rosybrown.php?page=informes_libro_ingresos" class="btn-submit" title="Ver Libro de Ingresos">Ver</a>
     </div>
     <div class="informe-card" title="Libro de Gastos">
       <h3>Libro de Gastos</h3>
       <p>Listado detallado de todos los gastos registrados.</p>
-      <a href="index.php?page=informes_libro_gastos" class="btn-submit" title="Ver Libro de Gastos">Ver</a>
+      <a href="rosybrown.php?page=informes_libro_gastos" class="btn-submit" title="Ver Libro de Gastos">Ver</a>
     </div>
     <div class="informe-card" title="Libro Mayor">
       <h3>Libro Mayor</h3>
       <p>Consolidado de ingresos y gastos ordenado cronológicamente.</p>
-      <a href="index.php?page=informes_libro_mayor" class="btn-submit" title="Ver Libro Mayor">Ver</a>
+      <a href="rosybrown.php?page=informes_libro_mayor" class="btn-submit" title="Ver Libro Mayor">Ver</a>
     </div>
   </div>
 </body>

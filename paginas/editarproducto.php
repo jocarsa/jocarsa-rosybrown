@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nombre'])) {
         $_POST['price'],
         $producto_id
     ]);
-    echo "<script>window.location.href='index.php?page=productos';</script>";
+    echo "<script>window.location.href='rosybrown.php?page=productos';</script>";
     exit;
 }
 $stmt = $db->prepare("SELECT * FROM productos WHERE id=?");
@@ -28,7 +28,7 @@ $producto = $stmt->fetch(PDO::FETCH_ASSOC);
 </head>
 <body>
     <h2 title="Editar producto">Editar Producto</h2>
-    <form method="post" action="index.php?page=producto_editar&id=<?php echo $producto_id; ?>" class="form-full">
+    <form method="post" action="rosybrown.php?page=producto_editar&id=<?php echo $producto_id; ?>" class="form-full">
         <div class="form-row">
             <div class="form-label">
                 <label title="Nombre del producto">Nombre del Producto:</label>

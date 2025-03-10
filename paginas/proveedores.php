@@ -3,7 +3,7 @@
 ?>
 <h2 title="Listado de proveedores">Proveedores</h2>
 <p>Gestione los proveedores. Puede crear, editar o eliminar registros.</p>
-<a href="index.php?page=crearproveedor" class="btn-submit" title="Crear nuevo proveedor" style="margin-bottom:20px; display:inline-block;">Crear Proveedor</a>
+<a href="rosybrown.php?page=crearproveedor" class="btn-submit" title="Crear nuevo proveedor" style="margin-bottom:20px; display:inline-block;">Crear Proveedor</a>
 <table title="Tabla de proveedores">
     <tr>
         <th>Razón Social</th>
@@ -29,8 +29,8 @@
         echo "<td>" . htmlspecialchars($prov['contacto_email']) . "</td>";
         echo "<td>" . htmlspecialchars($prov['contacto_telefono']) . "</td>";
         echo "<td>";
-        echo "<a href='index.php?page=editarproveedor&id=" . $prov['id'] . "' title='Editar proveedor'>Editar</a> | ";
-        echo "<a href='index.php?page=proveedores&accion=eliminar&id=" . $prov['id'] . "' onclick='return confirm(\"¿Está seguro?\")' title='Eliminar proveedor'>Eliminar</a>";
+        echo "<a href='rosybrown.php?page=editarproveedor&id=" . $prov['id'] . "' title='Editar proveedor'>Editar</a> | ";
+        echo "<a href='rosybrown.php?page=proveedores&accion=eliminar&id=" . $prov['id'] . "' onclick='return confirm(\"¿Está seguro?\")' title='Eliminar proveedor'>Eliminar</a>";
         echo "</td>";
         echo "</tr>";
     }

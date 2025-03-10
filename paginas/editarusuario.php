@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['usuario'])) {
         $_POST['password'],
         $usuario_id
     ]);
-    echo "<script>window.location.href='index.php?page=usuarios';</script>";
+    echo "<script>window.location.href='rosybrown.php?page=usuarios';</script>";
     exit;
 }
 $stmt = $db->prepare("SELECT * FROM usuarios WHERE id=?");
@@ -29,7 +29,7 @@ $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 </head>
 <body>
     <h2 title="Editar datos del usuario">Editar Usuario</h2>
-    <form method="post" action="index.php?page=usuario_editar&id=<?php echo $usuario_id; ?>" class="form-full">
+    <form method="post" action="rosybrown.php?page=usuario_editar&id=<?php echo $usuario_id; ?>" class="form-full">
         <div class="form-row">
             <div class="form-label">
                 <label title="Nombre de usuario">Usuario:</label>

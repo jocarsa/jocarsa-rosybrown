@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['name'])) {
         $_POST['iva_percentage'],
         $epi_id
     ]);
-    echo "<script>window.location.href='index.php?page=epigrafes';</script>";
+    echo "<script>window.location.href='rosybrown.php?page=epigrafes';</script>";
     exit;
 }
 $stmt = $db->prepare("SELECT * FROM epigrafes WHERE id=?");
@@ -27,7 +27,7 @@ $epi = $stmt->fetch(PDO::FETCH_ASSOC);
 </head>
 <body>
     <h2 title="Editar epígrafe">Editar Epígrafe</h2>
-    <form method="post" action="index.php?page=epigrafes_editar&id=<?php echo $epi_id; ?>" class="form-full">
+    <form method="post" action="rosybrown.php?page=epigrafes_editar&id=<?php echo $epi_id; ?>" class="form-full">
         <div class="form-row">
             <div class="form-label">
                 <label title="Nombre del epígrafe">Nombre:</label>

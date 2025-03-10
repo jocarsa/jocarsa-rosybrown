@@ -4,7 +4,7 @@
 <p>Esta área le permite crear, visualizar, editar, imprimir y eliminar facturas. Desde aquí se puede revisar el historial de facturación, consultar detalles de cada operación y realizar modificaciones en caso de ser necesario. Es la sección central para la gestión de su actividad comercial y administrativa.
 
 </p>
-<a href="index.php?page=factura_crear" class="btn-submit" title="Crear nueva factura" style="margin-bottom:20px; display:inline-block;">Crear Factura</a>
+<a href="rosybrown.php?page=factura_crear" class="btn-submit" title="Crear nueva factura" style="margin-bottom:20px; display:inline-block;">Crear Factura</a>
 <table title="Tabla de facturas">
     <tr>
         <th>Nº Factura</th>
@@ -28,10 +28,10 @@
         echo "<td>" . htmlspecialchars($factura['epigrafe_name'] ? $factura['epigrafe_name'] : 'N/A') . "</td>";
         echo "<td>" . htmlspecialchars($factura['total']) . "€</td>";
         echo "<td>";
-        echo "<a href='index.php?page=factura_ver&id=" . $factura['id'] . "' title='Ver factura'>Ver</a> | ";
-        echo "<a href='index.php?page=factura_editar&id=" . $factura['id'] . "' title='Editar factura'>Editar</a> | ";
-        echo "<a href='index.php?page=factura_imprimir&id=" . $factura['id'] . "' title='Imprimir factura'>Imprimir</a> | ";
-        echo "<a href='index.php?page=facturas&accion=eliminar&id=" . $factura['id'] . "' onclick='return confirm(\"¿Está seguro?\")' title='Eliminar factura'>Eliminar</a>";
+        echo "<a href='rosybrown.php?page=factura_ver&id=" . $factura['id'] . "' title='Ver factura'>Ver</a> | ";
+        echo "<a href='rosybrown.php?page=factura_editar&id=" . $factura['id'] . "' title='Editar factura'>Editar</a> | ";
+        echo "<a href='rosybrown.php?page=factura_imprimir&id=" . $factura['id'] . "' title='Imprimir factura'>Imprimir</a> | ";
+        echo "<a href='rosybrown.php?page=facturas&accion=eliminar&id=" . $factura['id'] . "' onclick='return confirm(\"¿Está seguro?\")' title='Eliminar factura'>Eliminar</a>";
         echo "</td>";
         echo "</tr>";
     }

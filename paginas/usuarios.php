@@ -2,7 +2,7 @@
 <p>La sección "Usuarios" le permite gestionar el acceso al sistema. Puede crear nuevos usuarios, así como editar o eliminar aquellos que ya no requiera. Asegúrese de que sólo el personal autorizado tenga acceso al panel de administración, para mantener la seguridad y la integridad de los datos.
 
 </p>
-<a href="index.php?page=usuario_crear" class="btn-submit" title="Crear nuevo usuario" style="margin-bottom:20px; display:inline-block;">Crear Usuario</a>
+<a href="rosybrown.php?page=usuario_crear" class="btn-submit" title="Crear nuevo usuario" style="margin-bottom:20px; display:inline-block;">Crear Usuario</a>
 <table title="Tabla de usuarios">
     <tr>
         <th>Usuario</th>
@@ -18,8 +18,8 @@
         echo "<td>" . htmlspecialchars($usuario['email']) . "</td>";
         echo "<td>" . htmlspecialchars($usuario['nombre']) . "</td>";
         echo "<td>";
-        echo "<a href='index.php?page=usuario_editar&id=" . $usuario['id'] . "' title='Editar usuario'>Editar</a> | ";
-        echo "<a href='index.php?page=usuarios&accion=eliminar&id=" . $usuario['id'] . "' onclick='return confirm(\"¿Está seguro?\")' title='Eliminar usuario'>Eliminar</a>";
+        echo "<a href='rosybrown.php?page=usuario_editar&id=" . $usuario['id'] . "' title='Editar usuario'>Editar</a> | ";
+        echo "<a href='rosybrown.php?page=usuarios&accion=eliminar&id=" . $usuario['id'] . "' onclick='return confirm(\"¿Está seguro?\")' title='Eliminar usuario'>Eliminar</a>";
         echo "</td>";
         echo "</tr>";
     }

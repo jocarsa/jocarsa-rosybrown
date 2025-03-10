@@ -14,7 +14,7 @@ if (!isset($_GET['id'])) {
                             $_POST['id_number'],
                             $cliente_id
                         ]);
-                        echo "<script>window.location.href='index.php?page=clientes';</script>";
+                        echo "<script>window.location.href='rosybrown.php?page=clientes';</script>";
                         exit;
                     }
                     $stmt = $db->prepare("SELECT * FROM clientes WHERE id=?");
@@ -30,7 +30,7 @@ if (!isset($_GET['id'])) {
                     </head>
                     <body>
                         <h2 title="Editar datos del cliente">Editar Cliente</h2>
-                        <form method="post" action="index.php?page=cliente_editar&id=<?php echo $cliente_id; ?>" class="form-full">
+                        <form method="post" action="rosybrown.php?page=cliente_editar&id=<?php echo $cliente_id; ?>" class="form-full">
                             <div class="form-row">
                                 <div class="form-label">
                                     <label title="Nombre completo del cliente">Nombre:</label>

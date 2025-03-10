@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['razon_social'])) {
         $_POST['contacto_telefono'],
         $prov_id
     ]);
-    echo "<script>window.location.href='index.php?page=proveedores';</script>";
+    echo "<script>window.location.href='rosybrown.php?page=proveedores';</script>";
     exit;
 }
 $stmt = $db->prepare("SELECT * FROM proveedores WHERE id=?");
@@ -33,7 +33,7 @@ $prov = $stmt->fetch(PDO::FETCH_ASSOC);
 </head>
 <body>
     <h2 title="Editar proveedor">Editar Proveedor</h2>
-    <form method="post" action="index.php?page=editarproveedor&id=<?php echo $prov_id; ?>" class="form-full">
+    <form method="post" action="rosybrown.php?page=editarproveedor&id=<?php echo $prov_id; ?>" class="form-full">
         <div class="form-row">
             <div class="form-label"><label>Razón Social:</label></div>
             <div class="form-field"><input type="text" name="razon_social" value="<?php echo htmlspecialchars($prov['razon_social']); ?>" required></div>

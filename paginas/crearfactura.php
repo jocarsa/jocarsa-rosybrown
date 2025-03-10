@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['invoice_number'])) {
     $stmt = $db->prepare("UPDATE facturas SET total=? WHERE id=?");
     $stmt->execute([$subtotal, $factura_id]);
     // Redirect to the invoice view page (which uses the same design as print invoice).
-    header("Location: index.php?page=factura_ver&id=" . $factura_id);
+    header("Location: rosybrown.php?page=factura_ver&id=" . $factura_id);
     exit;
 }
 ?>
@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['invoice_number'])) {
         </div>
         
         <!-- Invoice Number and Date -->
-        <form method="post" action="index.php?page=factura_crear" class="form-full">
+        <form method="post" action="rosybrown.php?page=factura_crear" class="form-full">
             <div class="invoice-number" style="display:flex; justify-content:space-between; margin:20px 0;">
                 <div>
                     <strong>FACTURA NÚMERO:</strong> 

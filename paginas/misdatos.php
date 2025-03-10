@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <p>En esta sección podrá actualizar y configurar la información que aparece en sus facturas. Esto incluye datos personales, razón social, dirección, código postal, ciudad, número de identificación, cuenta bancaria y el pie de factura. Mantener estos datos actualizados es fundamental para que la facturación refleje correctamente su identidad y obligaciones fiscales.
 
 </p>
-                    <form method="post" action="index.php?page=mis_datos" class="form-full">
+                    <form method="post" action="rosybrown.php?page=mis_datos" class="form-full">
                         <div class="form-row">
                             <div class="form-label">
                                 <label title="Ingrese el título de la factura (ej: FACTURA)">Título de Factura:</label>

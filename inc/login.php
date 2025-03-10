@@ -8,7 +8,7 @@ if (!isset($_SESSION['usuario'])) {
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($user && $user['password'] === $_POST['password']) {
             $_SESSION['usuario'] = $user;
-            header("Location: index.php");
+            header("Location: rosybrown.php");
             exit;
         } else {
             $error_login = "Usuario o contraseña incorrectos.";
@@ -31,7 +31,7 @@ if (!isset($_SESSION['usuario'])) {
             </div>
             
             <?php if(isset($error_login)) echo "<p class='error' title='Mensaje de error'>$error_login</p>"; ?>
-            <form method="post" action="index.php">
+            <form method="post" action="rosybrown.php">
                 <div class="form-row">
                     <div class="form-label">
                         <label title="Ingrese su usuario (ej: jocarsa)">Usuario:</label>

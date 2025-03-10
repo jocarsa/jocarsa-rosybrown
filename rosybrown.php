@@ -43,33 +43,33 @@ function activo($pagina){
     <div class="admin-container">
         <nav class="admin-nav">
             <ul>
-                <li <?php activo("inicio") ?>><a href="index.php" title="Ir a la página de inicio">Inicio</a></li>
+                <li <?php activo("inicio") ?>><a href="rosybrown.php" title="Ir a la página de inicio">Inicio</a></li>
                 <hr>
-                <li <?php activo("mis_datos") ?>><a href="index.php?page=mis_datos" title="Editar mis datos de factura">Mis Datos</a></li>
-                <li <?php activo("epigrafes") ?>><a href="index.php?page=epigrafes" title="Gestionar epígrafe">Epígrafes</a></li>
+                <li <?php activo("mis_datos") ?>><a href="rosybrown.php?page=mis_datos" title="Editar mis datos de factura">Mis Datos</a></li>
+                <li <?php activo("epigrafes") ?>><a href="rosybrown.php?page=epigrafes" title="Gestionar epígrafe">Epígrafes</a></li>
                 <hr>
-                <li <?php activo("clientes") ?>><a href="index.php?page=clientes" title="Gestionar clientes">Clientes</a></li>
-                <li <?php activo("productos") ?>><a href="index.php?page=productos" title="Gestionar productos">Productos</a></li>
-                <li <?php activo("facturas") ?>><a href="index.php?page=facturas" title="Gestionar facturas">Facturas</a></li>
+                <li <?php activo("clientes") ?>><a href="rosybrown.php?page=clientes" title="Gestionar clientes">Clientes</a></li>
+                <li <?php activo("productos") ?>><a href="rosybrown.php?page=productos" title="Gestionar productos">Productos</a></li>
+                <li <?php activo("facturas") ?>><a href="rosybrown.php?page=facturas" title="Gestionar facturas">Facturas</a></li>
                 	<hr>
-                <li <?php activo("proveedores") ?>><a href="index.php?page=proveedores" title="Gestionar proveedores">Proveedores</a></li>
+                <li <?php activo("proveedores") ?>><a href="rosybrown.php?page=proveedores" title="Gestionar proveedores">Proveedores</a></li>
 					
-						<li <?php activo("gastos") ?>><a href="index.php?page=gastos" title="Gestionar gastos">Gastos</a></li>
+						<li <?php activo("gastos") ?>><a href="rosybrown.php?page=gastos" title="Gestionar gastos">Gastos</a></li>
 						<hr>
-						<li <?php activo("informes") ?>><a href="index.php?page=informes" title="Ver informes">Informes</a></li>
+						<li <?php activo("informes") ?>><a href="rosybrown.php?page=informes" title="Ver informes">Informes</a></li>
 
                 
                 <hr>
-                <li <?php activo("usuarios") ?>><a href="index.php?page=usuarios" title="Gestionar usuarios">Usuarios</a></li>
+                <li <?php activo("usuarios") ?>><a href="rosybrown.php?page=usuarios" title="Gestionar usuarios">Usuarios</a></li>
                 
 					<hr>
-                <li>  <a href="index.php?accion=logout" title="Cerrar sesión">Cerrar Sesión</a></li>
+                <li>  <a href="rosybrown.php?accion=logout" title="Cerrar sesión">Cerrar Sesión</a></li>
             </ul>
         </nav>
         <main class="admin-content">
             <?php
             // Enrutado de páginas mediante "page"
-            // Inside index.php (after session_start and DB connection)
+            // Inside rosybrown.php (after session_start and DB connection)
 $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
 switch ($page) {
     case 'dashboard':

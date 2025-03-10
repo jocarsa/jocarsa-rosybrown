@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['gasto_deducible'])) {
         $_POST['iva_deducido'],
         $gasto_id
     ]);
-    echo "<script>window.location.href='index.php?page=gastos';</script>";
+    echo "<script>window.location.href='rosybrown.php?page=gastos';</script>";
     exit;
 }
 $stmt = $db->prepare("SELECT * FROM gastos WHERE id=?");
@@ -39,7 +39,7 @@ $proveedores = $db->query("SELECT * FROM proveedores")->fetchAll(PDO::FETCH_ASSO
 </head>
 <body>
     <h2 title="Editar gasto">Editar Gasto</h2>
-    <form method="post" action="index.php?page=editargasto&id=<?php echo $gasto_id; ?>" class="form-full">
+    <form method="post" action="rosybrown.php?page=editargasto&id=<?php echo $gasto_id; ?>" class="form-full">
         <div class="form-row">
             <div class="form-label"><label>Gasto Deducible (€):</label></div>
             <div class="form-field"><input type="number" step="0.01" name="gasto_deducible" value="<?php echo htmlspecialchars($gasto['gasto_deducible']); ?>" required></div>

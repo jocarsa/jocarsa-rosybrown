@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['usuario'])) {
         $_POST['nombre'],
         $_POST['password']
     ]);
-    echo "<script>window.location.href='index.php?page=usuarios';</script>";
+    echo "<script>window.location.href='rosybrown.php?page=usuarios';</script>";
     exit;
 }
 ?>
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['usuario'])) {
 </head>
 <body>
     <h2 title="Crear nuevo usuario">Crear Usuario</h2>
-    <form method="post" action="index.php?page=usuario_crear" class="form-full">
+    <form method="post" action="rosybrown.php?page=usuario_crear" class="form-full">
         <div class="form-row">
             <div class="form-label">
                 <label title="Nombre de usuario">Usuario:</label>

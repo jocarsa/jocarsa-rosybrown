@@ -24,9 +24,9 @@
                             echo "<td>" . htmlspecialchars($cliente['city']) . "</td>";
                             echo "<td>" . htmlspecialchars($cliente['id_number']) . "</td>";
                             echo "<td>";
-                            echo "<a href='index.php?page=cliente_ver&id=" . $cliente['id'] . "' title='Ver cliente'>Ver</a> | ";
-                            echo "<a href='index.php?page=cliente_editar&id=" . $cliente['id'] . "' title='Editar cliente'>Editar</a> | ";
-                            echo "<a href='index.php?page=clientes&accion=eliminar&id=" . $cliente['id'] . "' onclick='return confirm(\"¿Está seguro?\")' title='Eliminar cliente'>Eliminar</a>";
+                            echo "<a href='rosybrown.php?page=cliente_ver&id=" . $cliente['id'] . "' title='Ver cliente'>Ver</a> | ";
+                            echo "<a href='rosybrown.php?page=cliente_editar&id=" . $cliente['id'] . "' title='Editar cliente'>Editar</a> | ";
+                            echo "<a href='rosybrown.php?page=clientes&accion=eliminar&id=" . $cliente['id'] . "' onclick='return confirm(\"¿Está seguro?\")' title='Eliminar cliente'>Eliminar</a>";
                             echo "</td>";
                             echo "</tr>";
                         }

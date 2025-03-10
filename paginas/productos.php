@@ -2,7 +2,7 @@
 <p>En "Productos" se gestionan los artículos o servicios que ofrece. Aquí puede definir o modificar el nombre, descripción y precio de cada producto o servicio. Estos datos se utilizarán al generar facturas, permitiendo una selección rápida y precisa de los ítems a facturar.
 
 </p>
-<a href="index.php?page=producto_crear" class="btn-submit" title="Crear nuevo producto" style="margin-bottom:20px; display:inline-block;">Crear Producto</a>
+<a href="rosybrown.php?page=producto_crear" class="btn-submit" title="Crear nuevo producto" style="margin-bottom:20px; display:inline-block;">Crear Producto</a>
 <table title="Tabla de productos">
     <tr>
         <th>Nombre</th>
@@ -18,9 +18,9 @@
         echo "<td>" . htmlspecialchars($producto['descripcion']) . "</td>";
         echo "<td>" . htmlspecialchars($producto['price']) . "€</td>";
         echo "<td>";
-        echo "<a href='index.php?page=producto_ver&id=" . $producto['id'] . "' title='Ver producto'>Ver</a> | ";
-        echo "<a href='index.php?page=producto_editar&id=" . $producto['id'] . "' title='Editar producto'>Editar</a> | ";
-        echo "<a href='index.php?page=productos&accion=eliminar&id=" . $producto['id'] . "' onclick='return confirm(\"¿Está seguro?\")' title='Eliminar producto'>Eliminar</a>";
+        echo "<a href='rosybrown.php?page=producto_ver&id=" . $producto['id'] . "' title='Ver producto'>Ver</a> | ";
+        echo "<a href='rosybrown.php?page=producto_editar&id=" . $producto['id'] . "' title='Editar producto'>Editar</a> | ";
+        echo "<a href='rosybrown.php?page=productos&accion=eliminar&id=" . $producto['id'] . "' onclick='return confirm(\"¿Está seguro?\")' title='Eliminar producto'>Eliminar</a>";
         echo "</td>";
         echo "</tr>";
     }

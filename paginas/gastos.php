@@ -3,7 +3,7 @@
 ?>
 <h2 title="Listado de gastos">Gastos</h2>
 <p>Gestione el registro de gastos. Cada gasto se almacena con datos fiscales y deducibles.</p>
-<a href="index.php?page=creargasto" class="btn-submit" title="Crear nuevo gasto" style="margin-bottom:20px; display:inline-block;">Crear Gasto</a>
+<a href="rosybrown.php?page=creargasto" class="btn-submit" title="Crear nuevo gasto" style="margin-bottom:20px; display:inline-block;">Crear Gasto</a>
 <table title="Tabla de gastos">
     <tr>
         <th>Gasto Deducible</th>
@@ -39,8 +39,8 @@
         echo "<td>" . htmlspecialchars($gasto['cuota_iva']) . "€</td>";
         echo "<td>" . htmlspecialchars($gasto['iva_deducido']) . "€</td>";
         echo "<td>";
-        echo "<a href='index.php?page=editargasto&id=" . $gasto['id'] . "' title='Editar gasto'>Editar</a> | ";
-        echo "<a href='index.php?page=gastos&accion=eliminar&id=" . $gasto['id'] . "' onclick='return confirm(\"¿Está seguro?\")' title='Eliminar gasto'>Eliminar</a>";
+        echo "<a href='rosybrown.php?page=editargasto&id=" . $gasto['id'] . "' title='Editar gasto'>Editar</a> | ";
+        echo "<a href='rosybrown.php?page=gastos&accion=eliminar&id=" . $gasto['id'] . "' onclick='return confirm(\"¿Está seguro?\")' title='Eliminar gasto'>Eliminar</a>";
         echo "</td>";
         echo "</tr>";
     }
