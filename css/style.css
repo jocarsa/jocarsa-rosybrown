@@ -33,6 +33,7 @@ body {
     width: 220px;
     background: #444;
     padding: 20px;
+    padding-right:0px;
 }
 
 .admin-nav ul {
@@ -40,7 +41,9 @@ body {
 }
 
 .admin-nav ul li {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+    margin-top:20px;
+    padding-left:20px;
 }
 
 .admin-nav ul li a {
@@ -238,60 +241,75 @@ th, td {
     padding: 10px;
     text-align: left;
 }
+
 @media print {
-  /* Ocultar elementos de navegación, cabecera y cualquier otro elemento de la UI */
-  header,
-  nav,
-  .admin-header,
-  .admin-nav,
-  .admin-content,
-  .login-container,
-  .btn-submit {
-    display: none !important;
-  }
-
-  /* Solo mostrar el contenedor de la factura */
-  .container,
-  .invoice-preview {
-    display: block !important;
-    visibility: visible;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-  }
-
-  /* Configuración de página para A4 */
-  @page {
-    size: A4;
-    margin: 20mm;
-  }
+    header, nav {
+        display: none !important;
+    }
+    #factura {
+        display: block !important;
+        visibility: visible !important;
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    @page {
+        size: A4;
+        margin: 20mm;
+    }
 }
+
 /* Estilo para formularios en dos columnas */
 .form-row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .form-label {
-  flex: 0 0 40%;
-  padding-right: 10px;
-  font-weight: bold;
+    flex: 0 0 40%;
+    padding-right: 10px;
+    font-weight: bold;
 }
 
 .form-field {
-  flex: 1;
+    flex: 1;
 }
+
 /* New styles for charts grid layout */
 #charts-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+header h1{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+header h1 img{
+	width:60px;
+	margin-right:20px;
+}
+hr{
+	border:none;
+	border-top:1px solid gainsboro;
+	margin-bottom:10px;
+}
+.activo{
+	background:white;
+	padding:10px;
+	width:100%;
+}
+.activo a{
+	color:black !important;
 }

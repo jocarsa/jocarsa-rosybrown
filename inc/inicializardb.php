@@ -1,7 +1,7 @@
 <?php
-// Función para inicializar las tablas (si no existen)
+// inc/inicializardb.php
 function inicializarDB($db) {
-    // Tabla de usuarios
+    // Tabla de usuarios (unchanged)
     $db->exec("CREATE TABLE IF NOT EXISTS usuarios (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         usuario TEXT UNIQUE,
@@ -16,6 +16,7 @@ function inicializarDB($db) {
         $stmt = $db->prepare("INSERT INTO usuarios (usuario, email, nombre, password) VALUES (?,?,?,?)");
         $stmt->execute(['jocarsa', 'info@josevicentecarratala.com', 'José Vicente Carratala', 'jocarsa']);
     }
+
     // Tabla de mis_datos (datos de factura)
     $db->exec("CREATE TABLE IF NOT EXISTS mis_datos (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -34,7 +35,8 @@ function inicializarDB($db) {
         $db->exec("INSERT INTO mis_datos (invoice_title, invoice_subtitle, my_name, address, postal_code, city, id_number, bank_account, invoice_footer)
         VALUES ('FACTURA', 'SERVICIO PROFESIONAL', 'Su Nombre', 'Su Dirección', '00000', 'Ciudad', 'ID123456', 'ESXX XXXX XXXX XXXX XXXX XXXX', 'Gracias por su compra')");
     }
-    // Tabla de clientes
+
+    // Tabla de clientes (unchanged)
     $db->exec("CREATE TABLE IF NOT EXISTS clientes (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT,
@@ -43,22 +45,35 @@ function inicializarDB($db) {
         city TEXT,
         id_number TEXT
     )");
-    // Tabla de productos
+
+    // --- NEW: Actualización de productos ---
+    // Drop old structure if needed or create new structure:
+    // (In a migration you might rename the old table and import data.)
     $db->exec("CREATE TABLE IF NOT EXISTS productos (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        product_name TEXT,
-        description1 TEXT,
-        description2 TEXT,
-        description3 TEXT,
-        description4 TEXT,
-        description5 TEXT,
-        description6 TEXT,
-        description7 TEXT,
-        description8 TEXT,
-        description9 TEXT,
-        description10 TEXT
+        nombre TEXT,
+        descripcion TEXT,
+        price REAL
     )");
-    // Tabla de facturas
+
+    // Tabla de epígrafe (new)
+    $db->exec("CREATE TABLE IF NOT EXISTS epigrafes (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        iva_percentage INTEGER
+    )");
+    // (Optional: insert default epígrafes)
+    $stmt = $db->query("SELECT COUNT(*) FROM epigrafes");
+    if ($stmt->fetchColumn() == 0) {
+        $db->exec("INSERT INTO epigrafes (name, iva_percentage) VALUES 
+            ('General', 21),
+            ('Reducido', 10),
+            ('Superreducido', 4),
+            ('Exento', 0)
+        ");
+    }
+
+    // Tabla de facturas (add epigrafe_id)
     $db->exec("CREATE TABLE IF NOT EXISTS facturas (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         invoice_number TEXT,
@@ -66,10 +81,13 @@ function inicializarDB($db) {
         cliente_id INTEGER,
         mis_datos_id INTEGER,
         total REAL,
+        epigrafe_id INTEGER,
         FOREIGN KEY(cliente_id) REFERENCES clientes(id),
-        FOREIGN KEY(mis_datos_id) REFERENCES mis_datos(id)
+        FOREIGN KEY(mis_datos_id) REFERENCES mis_datos(id),
+        FOREIGN KEY(epigrafe_id) REFERENCES epigrafes(id)
     )");
-    // Tabla de líneas de factura
+
+    // Tabla de líneas de factura (unchanged)
     $db->exec("CREATE TABLE IF NOT EXISTS lineas_factura (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         factura_id INTEGER,
@@ -82,3 +100,4 @@ function inicializarDB($db) {
     )");
 }
 ?>
+
